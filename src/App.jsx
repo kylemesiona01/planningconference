@@ -2,34 +2,40 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
+    <div className="container">
+      <img src="/logo.png" alt="Logo" className="main-logo" />
+
+      <div className="welcome-banner">
+        <img src="/welcome.png" alt="Welcome" className="welcome-image" />
+        <h1 className="title">ATTENDANCE</h1>
+      </div>
+
+      <h2 className="title">Choose Designated Office</h2>
+
+      <div className="options">
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSeKc8ZQchI-n3YTmm5n8ChF75Q9qym2lpx6pXDImvG-TpZzwA/viewform?usp=header"
+          className="card"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <p>Regional</p>
         </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
+
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfNcLsiiucip9tV5Jh5l93_mihoZ9WgBdUmVsEppXmaZo5f8g/viewform?usp=header"
+          className="card"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <p>Central Office</p>
         </a>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
+
 
 export default App
